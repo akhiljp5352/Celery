@@ -12,7 +12,9 @@
     - `app.task_acks_late=True` Tasks aren't reserved but not acknowledged wuntil task execution finishes
     -  `app.worker_prefetch_multiplier=1` Each worker can only hold one unacknowedged task at a time
 - Other task queue libraries than celery: RQ-Redis Queue, Huey, Dramatiq, TaskTiger, Dask
-- RQ
+  
+`RQ`
+
   ```
     from redis import Redis
     from rq import Queue
@@ -31,7 +33,9 @@
     def worker():
     os.system("rq worker")
 ```
-- Dramatiq
+
+`Dramatiq`
+
 ```
     import dramatiq
     
@@ -45,7 +49,9 @@
     def worker():
       os.system("dramatiq module.path")
 ```
-- Huey
+
+`Huey`
+
 ```
     from huey import RedisHuey
     
@@ -62,7 +68,9 @@
     def worker():
       os.system("huey_consumer.py module.path")
 ```
--TaskTiger
+
+`TaskTiger`
+
 ```
     import tasktiger
     
@@ -78,7 +86,9 @@
     def worker():
       os.system("tasktiger")
 ```
-- Dask is not a task queue, but provides distributed parallelism in python. Allows you to distribute data operations over a cluster. Provides distributed pandas DataFrames and numpy arrays.
+
+`Dask is not a task queue, but provides distributed parallelism in python. Allows you to distribute data operations over a cluster. Provides distributed pandas DataFrames and numpy arrays.`
+
     ```
     from dask.distributed import Client
     
