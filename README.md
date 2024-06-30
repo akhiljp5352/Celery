@@ -89,7 +89,7 @@
 
 `Dask is not a task queue, but provides distributed parallelism in python. Allows you to distribute data operations over a cluster. Provides distributed pandas DataFrames and numpy arrays.`
 
-    ```
+```
     from dask.distributed import Client
     
     client = Client()
